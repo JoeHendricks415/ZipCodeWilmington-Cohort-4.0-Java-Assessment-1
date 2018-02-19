@@ -39,8 +39,6 @@ public class IntegerArrayUtilsTest {
         Integer[] input = { 1, 2, 3, 4, 5};
         Double expected = 3.0;
 
-        // changed expected to 3.0 from 2.4 // 15 % 5 = 3.0
-
         // : When
         Double actual = IntegerArrayUtils.getAverage(input);
 
