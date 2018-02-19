@@ -10,8 +10,16 @@ public class ArrayUtils {
      * @return the number of times the specified `value` occurs in the specified `objectArray`
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
-    public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+    public static Integer getNumberOfOccurrences(Integer[] objectArray, Integer objectToCount) {
+
+        int counter = 0;
+
+        for (int i = 0; i < objectArray.length; i ++){
+            if (objectArray[i] == objectToCount){
+                counter++;
+            }
+        }
+        return counter;
     }
 
     /**
@@ -20,8 +28,26 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+    public static Object[] removeValue(Integer[] objectArray, Integer objectToRemove) {
+
+        int counter = 0;
+        int remove = 0;
+
+        for (int i = 0; i < objectArray.length; i ++){
+            if (objectArray[i] == objectToRemove){
+                counter++;
+            }
+        }
+        Integer[] newArray = new Integer[objectArray.length - counter];
+
+        for (int j = 0; j < objectArray.length; j++){
+            if (objectArray[j] != objectToRemove){
+                newArray[remove] = objectArray[j];
+                remove++;
+            }
+        }
+
+        return newArray;
     }
 
     /**
@@ -30,6 +56,9 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
+
+
+
         return null;
     }
 
@@ -49,7 +78,21 @@ public class ArrayUtils {
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+    public static Object[] mergeArrays(Integer[] objectArray, Integer[] objectArrayToAdd) {
+
+
+        Integer[] mergedArray = new Integer[objectArray.length + objectArrayToAdd.length];
+
+        int counter = 0;
+
+        for(int i = 0; i < objectArray.length; i++) {
+            mergedArray[i] = objectArray[i];
+            counter++;
+        }
+        for(int x = 0; x < objectArrayToAdd.length ;x++) {
+            mergedArray[counter++] = objectArrayToAdd[x];
+        }
+
+        return mergedArray;
     }
 }

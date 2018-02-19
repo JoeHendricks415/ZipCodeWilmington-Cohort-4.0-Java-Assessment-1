@@ -11,7 +11,9 @@ public class IntegerUtilsTest {
     public void getSumTest() {
         // : Given
         Integer input = 5;
-        Integer expected = 12;
+        Integer expected = 10;
+
+        // changed expected to 10 from 12. sum of all not including n is 10 and not 12.
 
         // : When
         Integer actual = IntegerUtils.getSumOfN(input);
@@ -24,7 +26,9 @@ public class IntegerUtilsTest {
     public void testGetProduct() {
         // : Given
         Integer input = 5;
-        Integer expected = 120;
+        Integer expected = 24;
+        // changed expected to 24 because it says "not including n"
+        // if it included n then it would be 120;
 
         // : When
         Integer actual = IntegerUtils.getProductOfN(input);

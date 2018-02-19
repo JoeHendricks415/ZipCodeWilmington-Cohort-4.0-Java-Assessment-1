@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -9,7 +11,10 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+
+        String camelStr = str.substring(0, 1).toUpperCase() + str.substring(1);
+
+        return camelStr;
     }
 
     /**
@@ -17,7 +22,11 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        StringBuilder reverseStr = new StringBuilder(str);
+
+        reverseStr.reverse();
+
+        return reverseStr.toString();
     }
 
     /**
@@ -25,7 +34,14 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        StringBuilder reverseStr = new StringBuilder(str);
+
+        reverseStr.reverse();
+        reverseStr.toString();
+
+        String reverseThenCamel = reverseStr.substring(0, 1).toUpperCase() + reverseStr.substring(1);
+
+        return reverseThenCamel;
     }
 
 
@@ -34,7 +50,9 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+
+        String removeFirstLastChar = str.substring(1, str.length() -1);
+        return removeFirstLastChar;
     }
 
     /**
@@ -42,6 +60,22 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+
+        String invertChars = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char character = str.charAt(i);
+            if (Character.isUpperCase(character)) {
+                invertChars += Character.toLowerCase(character);
+            }
+            else if (Character.isLowerCase(character)) {
+                invertChars += Character.toUpperCase(character);
+            } else if (str.charAt(i) == ' '){
+                invertChars += " ";
+            }
+        }
+
+
+        return invertChars;
     }
 }
