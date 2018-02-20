@@ -14,25 +14,27 @@ public class PetOwner{
      */
 
     String name;
-    //Pet[] arrayOfPets;
-    ArrayList<Pet> pets;
+    ArrayList<Pet> petCollection;
+    Pet[] pets;
+
 
     public PetOwner(String name, Pet... pets) {
         this.name = name;
+        this.petCollection = new ArrayList<>();
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-
+        petCollection.add(pet);
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
+        petCollection.remove(pet);
     }
 
     /**
@@ -86,6 +88,6 @@ public class PetOwner{
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return this.pets;
     }
 }

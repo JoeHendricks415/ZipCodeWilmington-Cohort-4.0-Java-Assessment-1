@@ -55,15 +55,15 @@ public class RockPaperSissorsEvaluator {
         String winningHand = "";
 
 
-        if (handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("scissor") ||
-                handSignOfPlayer1.equals("scissor") && handSignOfPlayer2.equals("rock")){
-            winningHand += "rock";
+        if (handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("scissors") ||
+                handSignOfPlayer1.equals("scissors") && handSignOfPlayer2.equals("rock")){
+            winningHand = "rock";
         } else if(handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("paper") ||
                 handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("rock")){
             winningHand = "paper";
-        } else if(handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("scissor") ||
-                handSignOfPlayer1.equals("scissor") && handSignOfPlayer2.equals("paper")){
-            winningHand = "scissor";
+        } else if(handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("scissors") ||
+                handSignOfPlayer1.equals("scissors") && handSignOfPlayer2.equals("paper")){
+            winningHand = "scissors";
         }
         return winningHand;
 

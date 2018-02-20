@@ -14,7 +14,5 @@ public class Jumper {
             return (int)Math.floor(k / j) + j;
         }
 
-
-
     }
 
