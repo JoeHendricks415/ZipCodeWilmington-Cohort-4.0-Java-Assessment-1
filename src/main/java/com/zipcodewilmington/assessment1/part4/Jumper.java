@@ -6,6 +6,15 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+
+
+        if (k / j <= k) {
+            return (int)Math.floor(k / j);
+        } else
+            return (int)Math.floor(k / j) + j;
+        }
+
+
+
     }
-}
+

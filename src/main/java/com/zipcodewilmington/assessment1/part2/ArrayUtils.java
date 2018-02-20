@@ -55,7 +55,7 @@ public class ArrayUtils {
      * @return the most frequently occurring object in the array
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
-    public static Object getMostCommon(Object[] objectArray) {
+    public static Object getMostCommon(Integer[] objectArray) {
 
 
 
@@ -68,7 +68,7 @@ public class ArrayUtils {
      * @return the least frequently occurring object in the array
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
-    public static Object getLeastCommon(Object[] objectArray) {
+    public static Object getLeastCommon(Integer[] objectArray) {
         return null;
     }
 

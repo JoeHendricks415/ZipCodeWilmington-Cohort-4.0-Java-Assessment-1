@@ -165,13 +165,13 @@ public class PetOwnerTest {
         // Given
         Pet oneYearOldPuppy = new Dog(4);
         Pet twoYearOldKitten = new Cat(2);
-        Pet[] pets = { oneYearOldPuppy, twoYearOldKitten };
+        Pet[] pets = {oneYearOldPuppy, twoYearOldKitten};
         PetOwner po = new PetOwner("", oneYearOldPuppy, twoYearOldKitten);
         List<Pet> petList = Arrays.asList(po.getPets());
 
         // When
         // Then
-        for(Pet pet : pets) {
+        for (Pet pet : pets) {
             Assert.assertTrue(petList.contains(pet));
         }
     }
